@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--lightgray-color);
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	/* Layout */
+	--desktop-size: 1440px;
+	--mobile-size: 375px;
+	/* Colors */
+	--red-color: hsl(0, 78%, 62%);
+	--cyan-color: hsl(180, 62%, 55%);
+	--orange-color: hsl(34, 97%, 64%);
+	--blue-color: hsl(212, 86%, 64%);
+	/* Neutral Colors */
+	--darkblue-color: hsl(234, 12%, 34%);
+	--grayblue-color: hsl(229, 6%, 66%);
+	--lightgray-color: hsl(0, 0%, 98%);
+	--white-color: hsl(255, 100%, 100%);
+}
+
+/* Footer */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding:10px 0;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* Start with CSS */
+.title {
+	color: var(--grayblue-color);
+	font-weight: lighter;
+	text-align: center;
+}
+
+.title .bold {
+	display: block;
+	color: var(--darkblue-color);
+	font-weight: bold;
+}
+
+.subtitle {
+	color: var(--grayblue-color);
+	margin: 1rem;
+	text-align: center;
+}
+
+.center {
+	display: block;
+}
+
+.card-container {
+	width: 350px;
+	height: 220px;
+	padding: 25px;
+	margin: 2rem;
+	background: var(--white-color);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .1);
+	transition: all .8s;
+	cursor: pointer;
+}
+
+.supervisor {
+	border-top: groove var(--cyan-color);
+}
+.supervisor:hover {
+	border-top: 10px groove var(--cyan-color);
+}
+
+.team {
+	border-top: groove var(--red-color);
+}
+.team:hover {
+	border-top: 10px groove var(--red-color);
+}
+
+.karma {
+	border-top: groove var(--orange-color);
+}
+.karma:hover {
+	border-top: 10px groove var(--orange-color);
+}
+.calculator {
+	border-top: groove var(--blue-color);
+}
+.calculator:hover {
+	border-top: 10px groove var(--blue-color);
+}
+
+
+.card-image {
+	display: block;
+	float: right;
+	margin-top: 2rem;
+}
+
+.card-title {
+	color: var(--darkblue-color);
+}
+
+.card-description {
+	color: var(--grayblue-color);
+	font-size: 0.82rem;
+}
+
+.section {
+	max-width: var(--desktop-size);
+	height: calc(100vh - 37px);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.services-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* Responsive */
+
+@media(max-width: 375px) {
+
+	.section {
+		height: auto;
+		padding: 1rem 1.2rem;
+	}
+
+	.services-container {
+		flex-direction: column;
+	}
+
+	.title {
+		font-size: 21px;
+	}
+
+	.center {
+		display: inline;
+	}
+
+	.card-container {
+		margin: unset;
+		margin-bottom: 1rem;
+		width: auto;
+	}
+}
